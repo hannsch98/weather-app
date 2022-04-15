@@ -1,0 +1,114 @@
+body {
+	font-family: "Montserrat", sans-serif;
+	/*background-image: url("../media/clouds.jpg");*/
+}
+
+footer {
+	font-family: "Courier New", Courier, monospace;
+	border-top: 1px solid grey;
+	border-bottom: 1px solid grey;
+	margin: 50px auto 0;
+	text-align: center;
+	width: 30%;
+}
+
+h1 {
+	font-family: "Dancing Script", cursive;
+	font-size: 50px;
+	text-align: center;
+	color: #0071c3;
+}
+
+h2 {
+	color: #0071c3;
+	font-weight: 700;
+}
+
+h5 {
+	color: #0071c3;
+	font-weight: 600;
+}
+
+hr {
+	background-color: #0071c3;
+	color: #0071c3;
+	opacity: 1;
+	width: 45%;
+}
+
+img {
+	display: block;
+	margin: 0 auto;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	opacity: 0.5;
+}
+
+a {
+	color: #0071c3;
+}
+a:hover {
+	color: #a11900;
+}
+
+.container {
+	border: 1px solid grey;
+	padding: 30px;
+}
+
+.btn-primary {
+	background-color: #0071c3;
+	border-color: #0071c3;
+	margin-top: 15px;
+}
+
+.btn-primary:hover {
+	background-color: #fff;
+	color: #0071c3;
+	transition: all 200ms ease-in-out;
+}
+
+.btn-secondary {
+	background-color: #fff;
+	border-color: #0071c3;
+	color: #0071c3;
+	margin-top: 15px;
+}
+
+.btn-secondary:hover {
+	background-color: #0071c3;
+	color: #fff;
+	transition: all 200ms ease-in-out;
+}
+
+.btn-link {
+	padding: 0;
+}
+
+#current-date {
+	border-top: 1px solid grey;
+	border-bottom: 1px solid grey;
+	font-weight: 700;
+	padding-top: 5px;
+	text-align: center;
+}
+
+#current-temp {
+	font-size: 40px;
+}
+
+.search-box {
+	border: 2px solid #0071c3;
+	border-radius: 15px;
+	padding: 10px 20px;
+	width: 30%;
+}
+
+.forecast div {
+	text-align: center;
+}
+
+.col-3 {
+	width: 20%;
+}
