@@ -116,3 +116,7 @@ a:hover {
 .col-3 {
 	width: 20%;
 }
+
+#weather-description:first-letter {
+	text-transform: capitalize;
+}
