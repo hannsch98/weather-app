@@ -123,11 +123,11 @@ button.addEventListener("click", getCurrentPosition);
 
 //Change unit from Celsius to Fahrenheit and back
 
-/* 
 function changeUnit() {
 	let temp = document.querySelector("#current-temp");
-	let celsius = "12°C ☀️";
-	let fahrenheit = "54°F ☀️";
+
+	let celsius = "12 °C";
+	let fahrenheit = "54 °F";
 	let tempBtn = document.querySelector("#temp-btn");
 
 	if (unit === "celsius") {
@@ -143,5 +143,4 @@ function changeUnit() {
 
 let unit = "celsius";
 let fahrenheitBtn = document.querySelector("#temp-btn");
-fahrenheitBtn.addEventListener("click", changeUnit); 
-*/
+fahrenheitBtn.addEventListener("click", changeUnit);

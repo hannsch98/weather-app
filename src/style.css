@@ -74,6 +74,7 @@ a:hover {
 	border-color: #0071c3;
 	color: #0071c3;
 	margin-top: 15px;
+	margin-left: 15px;
 }
 
 .btn-secondary:hover {
@@ -84,6 +85,9 @@ a:hover {
 
 .btn-link {
 	padding: 0;
+}
+.btn-link:hover {
+	color: #a11900;
 }
 
 #current-date {
