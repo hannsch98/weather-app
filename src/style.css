@@ -68,6 +68,18 @@ a:hover {
 	font-size: 40px;
 }
 
+#search-box {
+	border: 2px solid #0071c3;
+	border-radius: 15px;
+	height: min-content;
+	padding: 20px 20px;
+	width: 30%;
+}
+
+#search-label {
+	padding-bottom: 5px;
+}
+
 #weather-description:first-letter {
 	text-transform: capitalize;
 }
@@ -118,13 +130,6 @@ a:hover {
 }
 .btn-link:hover {
 	color: #a11900;
-}
-
-.search-box {
-	border: 2px solid #0071c3;
-	border-radius: 15px;
-	padding: 10px 20px;
-	width: 30%;
 }
 
 .forecast div {
