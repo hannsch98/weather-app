@@ -1,3 +1,5 @@
+/* Tags */
+
 body {
 	font-family: "Montserrat", sans-serif;
 	/*background-image: url("../media/clouds.jpg");*/
@@ -5,11 +7,11 @@ body {
 
 footer {
 	font-family: "Courier New", Courier, monospace;
-	border-top: 1px solid grey;
-	border-bottom: 1px solid grey;
-	margin: 50px auto 0;
+	border-top: 1px solid #0071c3;
+	border-bottom: 1px solid #0071c3;
+	margin: 30px auto 0;
 	text-align: center;
-	width: 30%;
+	width: 50%;
 }
 
 h1 {
@@ -52,8 +54,27 @@ a:hover {
 	color: #a11900;
 }
 
+/* IDs */
+
+#current-date {
+	border-top: 1px solid #0071c3;
+	border-bottom: 1px solid #0071c3;
+	font-weight: 700;
+	padding-top: 5px;
+	text-align: center;
+}
+
+#current-temp {
+	font-size: 40px;
+}
+
+#weather-description:first-letter {
+	text-transform: capitalize;
+}
+
+/* classes */
+
 .container {
-	border: 1px solid grey;
 	padding: 30px;
 }
 
@@ -90,18 +111,6 @@ a:hover {
 	color: #a11900;
 }
 
-#current-date {
-	border-top: 1px solid grey;
-	border-bottom: 1px solid grey;
-	font-weight: 700;
-	padding-top: 5px;
-	text-align: center;
-}
-
-#current-temp {
-	font-size: 40px;
-}
-
 .search-box {
 	border: 2px solid #0071c3;
 	border-radius: 15px;
@@ -115,8 +124,4 @@ a:hover {
 
 .col-3 {
 	width: 20%;
-}
-
-#weather-description:first-letter {
-	text-transform: capitalize;
 }
