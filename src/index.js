@@ -98,6 +98,15 @@ function showTemperature(response) {
 	let displayHumid = document.querySelector("#weather-humid");
 	let apiHumid = response.data.main.humidity;
 	displayHumid.innerHTML = `Humidity ${apiHumid} %`;
+
+	//icon
+	let displayIcon = document.querySelector("#weather-icon");
+	let apiIcon = response.data.weather[0].icon;
+	displayIcon.setAttribute(
+		"src",
+		`http://openweathermap.org/img/wn/${apiIcon}@2x.png`
+	);
+	displayIcon.setAttribute("alt", apiDescription);
 }
 
 // geoLocation

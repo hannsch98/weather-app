@@ -72,6 +72,15 @@ a:hover {
 	text-transform: capitalize;
 }
 
+#weather-icon {
+	display: inline;
+	left: 10px;
+	opacity: 1;
+	position: relative;
+	top: -10px;
+	width: 20%;
+}
+
 /* classes */
 
 .container {
