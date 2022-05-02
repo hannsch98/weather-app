@@ -97,6 +97,12 @@ a:hover {
 	text-align: center;
 }
 
+#forecast-icon {
+	opacity: 1;
+	position: relative;
+	width: 50%;
+}
+
 /* classes */
 
 .container {

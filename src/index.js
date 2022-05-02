@@ -73,6 +73,17 @@ searchForm.addEventListener("submit", searchCity);
 
 showCity("Vienna");
 
+//get Forecast data from API
+function getForecast(coordinates) {
+	let lat = coordinates.lat;
+	let lon = coordinates.lon;
+	let units = "metric";
+	let apiKey = "c757ac92a5aa99c5c15eeb0f1937036f";
+	let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=${units}&exclude=hourly,minutely&appid=${apiKey}`;
+
+	axios.get(apiUrl).then(showForecast);
+}
+
 function showTemperature(response) {
 	//city
 	let city = document.querySelector("#current-city");
@@ -108,6 +119,8 @@ function showTemperature(response) {
 		`http://openweathermap.org/img/wn/${apiIcon}@2x.png`
 	);
 	displayIcon.setAttribute("alt", apiDescription);
+
+	getForecast(response.data.coord);
 }
 
 // geoLocation
@@ -160,31 +173,52 @@ fahrenheitBtn.addEventListener("click", changeUnit);
 
 // 5 day forecast
 
-function displayForecast() {
+function formatDay(timestamp) {
+	let date = new Date(timestamp * 1000);
+	let day = date.getDay();
+	let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+	return days[day];
+}
+
+function showForecast(response) {
+	console.log(response.data.daily);
+
+	//array of forecast data
+	let forecastData = response.data.daily;
+
 	let forecastElement = document.querySelector("#forecast");
 
 	let forecastHTML = `<div class="row">`;
-	let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
-	days.forEach(function (day) {
-		forecastHTML =
-			forecastHTML +
-			`
+
+	forecastData.forEach(function (forecastDay, index) {
+		if (index < 5) {
+			forecastHTML =
+				forecastHTML +
+				`
 					<div class="col-3">
 						<div class="card">
-							<h5 class="card-header forecast-day">${day}</h5>
+							<h5 class="card-header forecast-day">${formatDay(forecastDay.dt)}</h5>
 							<ul class="list-group list-group-flush">
-								<li class="list-group-item forecast-icon">🌥️</li>
-								<li class="list-group-item forecast-temp">10°C</li>
-								<li class="list-group-item forecast-wind">Wind 8km/h</li>
-								<li class="list-group-item forecast-humid">Humidity 44%</li>
+								<li class="list-group-item forecast-temp">
+									${Math.round(forecastDay.temp.day)} °C
+									<img src="http://openweathermap.org/img/wn/${
+										forecastDay.weather[0].icon
+									}@2x.png" id="forecast-icon" />
+								</li>
+								<li class="list-group-item forecast-wind">Wind ${Math.round(
+									forecastDay.wind_speed
+								)} km/h</li>
+								<li class="list-group-item forecast-humid">Humidity ${
+									forecastDay.humidity
+								} %</li>
 							</ul>
 						</div>
 					</div>
-	`;
+				`;
+		}
 	});
 
 	forecastHTML = forecastHTML + `</div>`;
 	forecastElement.innerHTML = forecastHTML;
 }
-
-displayForecast();
