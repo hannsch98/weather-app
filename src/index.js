@@ -204,7 +204,9 @@ function showForecast(response) {
 									${Math.round(forecastDay.temp.day)} °C
 									<img src="http://openweathermap.org/img/wn/${
 										forecastDay.weather[0].icon
-									}@2x.png" id="forecast-icon" />
+									}@2x.png" id="forecast-icon" alt="${
+					forecastDay.weather[0].description
+				}"/>
 								</li>
 								<li class="list-group-item forecast-wind">Wind ${Math.round(
 									forecastDay.wind_speed
