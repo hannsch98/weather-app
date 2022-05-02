@@ -84,6 +84,7 @@ function getForecast(coordinates) {
 	axios.get(apiUrl).then(showForecast);
 }
 
+//display current temp data
 function showTemperature(response) {
 	//city
 	let city = document.querySelector("#current-city");
@@ -143,33 +144,6 @@ function getCurrentPosition(event) {
 
 let button = document.querySelector("#current-location");
 button.addEventListener("click", getCurrentPosition);
-
-//Change unit from Celsius to Fahrenheit and back
-
-function changeUnit(event) {
-	event.preventDefault();
-
-	let temp = document.querySelector("#current-temp");
-
-	let celsius = celsiusTemp;
-	let fahrenheit = Math.round((celsiusTemp * 9) / 5 + 32);
-	let tempBtn = document.querySelector("#temp-btn");
-
-	if (unit === "celsius") {
-		temp.innerHTML = `${fahrenheit} °F`;
-		unit = "fahrenheit";
-		tempBtn.innerHTML = "Show in Celsius";
-	} else {
-		temp.innerHTML = `${celsius} °C`;
-		unit = "celsius";
-		tempBtn.innerHTML = "Show in Fahrenheit";
-	}
-}
-
-let celsiusTemp = null;
-let unit = "celsius";
-let fahrenheitBtn = document.querySelector("#temp-btn");
-fahrenheitBtn.addEventListener("click", changeUnit);
 
 // 5 day forecast
 
