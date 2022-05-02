@@ -157,3 +157,34 @@ let celsiusTemp = null;
 let unit = "celsius";
 let fahrenheitBtn = document.querySelector("#temp-btn");
 fahrenheitBtn.addEventListener("click", changeUnit);
+
+// 5 day forecast
+
+function displayForecast() {
+	let forecastElement = document.querySelector("#forecast");
+
+	let forecastHTML = `<div class="row">`;
+	let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
+	days.forEach(function (day) {
+		forecastHTML =
+			forecastHTML +
+			`
+					<div class="col-3">
+						<div class="card">
+							<h5 class="card-header forecast-day">${day}</h5>
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item forecast-icon">🌥️</li>
+								<li class="list-group-item forecast-temp">10°C</li>
+								<li class="list-group-item forecast-wind">Wind 8km/h</li>
+								<li class="list-group-item forecast-humid">Humidity 44%</li>
+							</ul>
+						</div>
+					</div>
+	`;
+	});
+
+	forecastHTML = forecastHTML + `</div>`;
+	forecastElement.innerHTML = forecastHTML;
+}
+
+displayForecast();
