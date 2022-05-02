@@ -156,8 +156,6 @@ function formatDay(timestamp) {
 }
 
 function showForecast(response) {
-	console.log(response.data.daily);
-
 	//array of forecast data
 	let forecastData = response.data.daily;
 
