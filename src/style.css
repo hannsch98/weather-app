@@ -1,3 +1,9 @@
+/* Colour variables */
+:root {
+	--primary-color: #0071c3;
+	--hover-color: #a11900;
+}
+
 /* Tags */
 
 body {
@@ -7,8 +13,8 @@ body {
 
 footer {
 	font-family: "Courier New", Courier, monospace;
-	border-top: 1px solid #0071c3;
-	border-bottom: 1px solid #0071c3;
+	border-top: 1px solid var(--primary-color);
+	border-bottom: 1px solid var(--primary-color);
 	margin: 30px auto 0;
 	text-align: center;
 	width: 50%;
@@ -18,22 +24,22 @@ h1 {
 	font-family: "Dancing Script", cursive;
 	font-size: 50px;
 	text-align: center;
-	color: #0071c3;
+	color: var(--primary-color);
 }
 
 h2 {
-	color: #0071c3;
+	color: var(--primary-color);
 	font-weight: 700;
 }
 
 h5 {
-	color: #0071c3;
+	color: var(--primary-color);
 	font-weight: 600;
 }
 
 hr {
-	background-color: #0071c3;
-	color: #0071c3;
+	background-color: var(--primary-color);
+	color: var(--primary-color);
 	opacity: 1;
 	width: 45%;
 }
@@ -48,17 +54,17 @@ img {
 }
 
 a {
-	color: #0071c3;
+	color: var(--primary-color);
 }
 a:hover {
-	color: #a11900;
+	color: var(--hover-color);
 }
 
 /* IDs */
 
 #current-date {
-	border-top: 1px solid #0071c3;
-	border-bottom: 1px solid #0071c3;
+	border-top: 1px solid var(--primary-color);
+	border-bottom: 1px solid var(--primary-color);
 	font-weight: 700;
 	padding-top: 5px;
 	text-align: center;
@@ -69,7 +75,7 @@ a:hover {
 }
 
 #search-box {
-	border: 2px solid #0071c3;
+	border: 2px solid var(--primary-color);
 	border-radius: 15px;
 	height: min-content;
 	padding: 20px 20px;
@@ -110,27 +116,27 @@ a:hover {
 }
 
 .btn-primary {
-	background-color: #0071c3;
-	border-color: #0071c3;
+	background-color: var(--primary-color);
+	border-color: var(--primary-color);
 	margin-top: 15px;
 }
 
 .btn-primary:hover {
 	background-color: #fff;
-	color: #0071c3;
+	color: var(--primary-color);
 	transition: all 200ms ease-in-out;
 }
 
 .btn-secondary {
 	background-color: #fff;
-	border-color: #0071c3;
-	color: #0071c3;
+	border-color: var(--primary-color);
+	color: var(--primary-color);
 	margin-top: 15px;
 	margin-left: 15px;
 }
 
 .btn-secondary:hover {
-	background-color: #0071c3;
+	background-color: var(--primary-color);
 	color: #fff;
 	transition: all 200ms ease-in-out;
 }
@@ -139,7 +145,7 @@ a:hover {
 	padding: 0;
 }
 .btn-link:hover {
-	color: #a11900;
+	color: var(--hover-color);
 }
 
 .col-3 {
